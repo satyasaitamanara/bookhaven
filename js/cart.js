@@ -34,7 +34,7 @@ function displayCartItems() {
             <div class="cart-item-details">
                 <h3 class="cart-item-title">${item.title}</h3>
                 <p class="cart-item-author">${item.author}</p>
-                <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+                <p class="cart-item-price">₹${item.price.toFixed(2)}</p>
                 <div class="cart-item-actions">
                     <div class="quantity-selector">
                         <button class="quantity-btn minus" data-id="${item.id}">-</button>
@@ -56,15 +56,15 @@ function displayCartItems() {
         <h3>Order Summary</h3>
         <div class="summary-row">
             <span>Subtotal</span>
-            <span>$${subtotal.toFixed(2)}</span>
+            <span>₹${subtotal.toFixed(2)}</span>
         </div>
         <div class="summary-row">
             <span>Tax (10%)</span>
-            <span>$${tax.toFixed(2)}</span>
+            <span>₹${tax.toFixed(2)}</span>
         </div>
         <div class="summary-row total">
             <span>Total</span>
-            <span>$${total.toFixed(2)}</span>
+            <span>₹${total.toFixed(2)}</span>
         </div>
         <button class="btn checkout-btn">Proceed to Checkout</button>
     `;
