@@ -49,8 +49,8 @@
                 <h3>Filter by Price</h3>
                 <div class="filter-options">
                     <button class="filter-btn" data-price="under">Under ₹1000</button>
-                    <button class="filter-btn" data-price="mid">₹1000 - ₹2000</button>
-                    <button class="filter-btn" data-price="over">Over ₹2000</button>
+                    <button class="filter-btn" data-price="mid">₹1000 - ₹1500</button>
+                    <button class="filter-btn" data-price="over">Over ₹1500</button>
                     <button class="filter-btn active" data-price="all">All</button>
                 </div>
             </div>
@@ -207,6 +207,75 @@
 
     <script src="../js/main.js"></script>
     <script>
+         document.addEventListener('DOMContentLoaded', function() {
+        // Price filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const priceFilter = this.textContent;
+                const books = document.querySelectorAll('.book-card');
+                
+                books.forEach(book => {
+                    const priceText = book.querySelector('.book-price').textContent;
+                    const price = parseFloat(priceText.replace('₹', ''));
+                    
+                    let shouldShow = true;
+                    
+                    if (priceFilter === 'Under ₹1000') {
+                        shouldShow = price < 1000;
+                    } else if (priceFilter === '₹1000 - ₹1500') {
+                        shouldShow = price >= 1000 && price <= 1500;
+                    } else if (priceFilter === 'Over ₹1500') {
+                        shouldShow = price > 1500;
+                    }
+                    
+                    book.style.display = shouldShow ? 'block' : 'none';
+                });
+            });
+        });
+        
+        // Sort functionality
+        document.querySelectorAll('.filter-options:last-child .filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-options:last-child .filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const sortOption = this.textContent;
+                const booksContainer = document.querySelector('.books-grid');
+                const books = Array.from(document.querySelectorAll('.book-card'));
+                
+                books.sort((a, b) => {
+                    const priceA = parseFloat(a.querySelector('.book-price').textContent.replace('₹', ''));
+                    const priceB = parseFloat(b.querySelector('.book-price').textContent.replace('₹', ''));
+                    const ratingA = a.querySelector('.book-rating').textContent.length;
+                    const ratingB = b.querySelector('.book-rating').textContent.length;
+                    
+                    if (sortOption === 'Price: Low to High') {
+                        return priceA - priceB;
+                    } else if (sortOption === 'Price: High to Low') {
+                        return priceB - priceA;
+                    } else { // Best Rated
+                        return ratingB - ratingA;
+                    }
+                });
+                
+                // Re-append sorted books
+                books.forEach(book => booksContainer.appendChild(book));
+            });
+        });
+    });
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize cart count
             updateCartCount();
@@ -217,33 +286,7 @@
             });
             
             // Price filter functionality
-            document.querySelectorAll('[data-price]').forEach(button => {
-                button.addEventListener('click', function() {
-                    // Update active state
-                    document.querySelectorAll('[data-price]').forEach(btn => {
-                        btn.classList.remove('active');
-                    });
-                    this.classList.add('active');
-                    
-                    const priceFilter = this.dataset.price;
-                    const books = document.querySelectorAll('.book-card');
-                    
-                    books.forEach(book => {
-                        const price = parseInt(book.dataset.price);
-                        let shouldShow = true;
-                        
-                        if (priceFilter === 'under') {
-                            shouldShow = price < 1000;
-                        } else if (priceFilter === 'mid') {
-                            shouldShow = price >= 1000 && price <= 2000;
-                        } else if (priceFilter === 'over') {
-                            shouldShow = price > 2000;
-                        }
-                        
-                        book.style.display = shouldShow ? 'block' : 'none';
-                    });
-                });
-            });
+
             
             // Sort functionality
             document.querySelectorAll('[data-sort]').forEach(button => {
