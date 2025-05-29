@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="../assets/icons/logo.png" type="image/png">
+    <title>Non-Fiction Books | Book Haven</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../assets/icons/book-favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">Book Haven</a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="fiction.html">Fiction</a></li>
+                    <li><a href="non-fiction.html" class="active">Non-Fiction</a></li>
+                    <li><a href="children.html">Children</a></li>
+                    <li><a href="academic.html">Academic</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <h1>Non-Fiction Books</h1>
+            <p>Explore our collection of biographies, history, science, and more</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-group">
+                <h3>Filter by Price</h3>
+                <div class="filter-options">
+                    <button class="filter-btn">Under $10</button>
+                    <button class="filter-btn">$10 - $20</button>
+                    <button class="filter-btn">Over $20</button>
+                    <button class="filter-btn active">All</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Sort By</h3>
+                <div class="filter-options">
+                    <button class="filter-btn">Price: Low to High</button>
+                    <button class="filter-btn">Price: High to Low</button>
+                    <button class="filter-btn active">Best Rated</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Grid -->
+    <section class="featured-books">
+        <div class="container">
+            <div class="books-grid">
+                <!-- Non-Fiction Books -->
+                <div class="book-card" data-id="4">
+                    <div class="book-img">
+                        <img src="../assets/images/book4.jpg" alt="History of the World">
+                    </div>
+                    <div class="book-info">
+                        <h3>History of the World</h3>
+                        <p class="book-author">Robert Brown</p>
+                        <p class="book-price">$19.99</p>
+                        <div class="book-rating">
+                            ★★★★☆
+                        </div>
+                        <button class="add-to-cart" data-id="4">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-id="9">
+                    <div class="book-img">
+                        <img src="../assets/images/book9.jpg" alt="The Science of Everything">
+                    </div>
+                    <div class="book-info">
+                        <h3>The Science of Everything</h3>
+                        <p class="book-author">Lisa Thompson</p>
+                        <p class="book-price">$22.99</p>
+                        <div class="book-rating">
+                            ★★★★★
+                        </div>
+                        <button class="add-to-cart" data-id="9">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-id="10">
+                    <div class="book-img">
+                        <img src="../assets/images/book10.jpg" alt="Memoirs of a Traveler">
+                    </div>
+                    <div class="book-info">
+                        <h3>Memoirs of a Traveler</h3>
+                        <p class="book-author">James Wilson</p>
+                        <p class="book-price">$15.99</p>
+                        <div class="book-rating">
+                            ★★★★☆
+                        </div>
+                        <button class="add-to-cart" data-id="10">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-id="11">
+                    <div class="book-img">
+                        <img src="../assets/images/book11.jpg" alt="The Art of Photography">
+                    </div>
+                    <div class="book-info">
+                        <h3>The Art of Photography</h3>
+                        <p class="book-author">Sarah Johnson</p>
+                        <p class="book-price">$24.99</p>
+                        <div class="book-rating">
+                            ★★★★☆
+                        </div>
+                        <button class="add-to-cart" data-id="11">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Book Haven</h3>
+                    <p>Your one-stop shop for all your reading needs since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="fiction.html">Fiction</a></li>
+                        <li><a href="non-fiction.html">Non-Fiction</a></li>
+                        <li><a href="children.html">Children</a></li>
+                        <li><a href="academic.html">Academic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Book St, Library City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@bookhaven.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Book Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Add event listeners to Add to Cart buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const bookId = parseInt(e.target.getAttribute('data-id'));
+                    const bookData = {
+                        4: { id: 4, title: "History of the World", author: "Robert Brown", price: 19.99, category: "non-fiction", rating: 4, image: "../assets/images/book4.jpg" },
+                        9: { id: 9, title: "The Science of Everything", author: "Lisa Thompson", price: 22.99, category: "non-fiction", rating: 5, image: "../assets/images/book9.jpg" },
+                        10: { id: 10, title: "Memoirs of a Traveler", author: "James Wilson", price: 15.99, category: "non-fiction", rating: 4, image: "../assets/images/book10.jpg" },
+                        11: { id: 11, title: "The Art of Photography", author: "Sarah Johnson", price: 24.99, category: "non-fiction", rating: 4, image: "../assets/images/book11.jpg" }
+                    };
+                    
+                    const book = bookData[bookId];
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    
+                    const existingItem = cart.find(item => item.id === bookId);
+                    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        cart.push({
+                            ...book,
+                            quantity: 1
+                        });
+                    }
+                    
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    
+                    // Update cart count
+                    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                    document.querySelectorAll('.cart-count').forEach(element => {
+                        element.textContent = totalItems;
+                    });
+                    
+                    // Show notification
+                    const notification = document.createElement('div');
+                    notification.className = 'notification';
+                    notification.textContent = `${book.title} added to cart!`;
+                    document.body.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        notification.classList.add('show');
+                    }, 10);
+                    
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                        setTimeout(() => {
+                            document.body.removeChild(notification);
+                        }, 300);
+                    }, 3000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

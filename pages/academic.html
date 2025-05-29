@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/icons/logo.png" type="image/png">
+    <title>Academic Books | Book Haven</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../assets/icons/book-favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">Book Haven</a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="fiction.html">Fiction</a></li>
+                    <li><a href="non-fiction.html">Non-Fiction</a></li>
+                    <li><a href="children.html">Children</a></li>
+                    <li><a href="academic.html" class="active">Academic</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <h1>Academic Books</h1>
+            <p>Explore our collection of textbooks, references, and study materials</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-group">
+                <h3>Filter by Price</h3>
+                <div class="filter-options">
+                    <button class="filter-btn" data-price="under">Under ₹1000</button>
+                    <button class="filter-btn" data-price="mid">₹1000 - ₹2000</button>
+                    <button class="filter-btn" data-price="over">Over ₹2000</button>
+                    <button class="filter-btn active" data-price="all">All</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Sort By</h3>
+                <div class="filter-options">
+                    <button class="filter-btn" data-sort="price-low">Price: Low to High</button>
+                    <button class="filter-btn" data-sort="price-high">Price: High to Low</button>
+                    <button class="filter-btn active" data-sort="rating">Best Rated</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Grid -->
+    <section class="featured-books">
+        <div class="container">
+            <div class="books-grid">
+                <!-- Academic Books -->
+                <div class="book-card" data-id="7" data-price="1299" data-rating="5">
+                    <div class="book-img">
+                        <img src="../assets/images/book7.jpg" alt="Science Fundamentals">
+                    </div>
+                    <div class="book-info">
+                        <h3>Science Fundamentals</h3>
+                        <p class="book-author">Jane Smith</p>
+                        <p class="book-price">₹1299.00</p>
+                        <div class="book-rating">
+                            ★★★★★
+                        </div>
+                        <button class="add-to-cart" data-id="7">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-id="8" data-price="1899" data-rating="3">
+                    <div class="book-img">
+                        <img src="../assets/images/book8.jpg" alt="Advanced Mathematics">
+                    </div>
+                    <div class="book-info">
+                        <h3>Advanced Mathematics</h3>
+                        <p class="book-author">Michael Wilson</p>
+                        <p class="book-price">₹1899.00</p>
+                        <div class="book-rating">
+                            ★★★☆☆
+                        </div>
+                        <button class="add-to-cart" data-id="8">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-id="9" data-price="2199" data-rating="5">
+                    <div class="book-img">
+                        <img src="../assets/images/book9.jpg" alt="Quantum Physics Explained">
+                    </div>
+                    <div class="book-info">
+                        <h3>Quantum Physics Explained</h3>
+                        <p class="book-author">Dr. Vikram Mehta</p>
+                        <p class="book-price">₹2199.00</p>
+                        <div class="book-rating">
+                            ★★★★★
+                        </div>
+                        <button class="add-to-cart" data-id="9">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-id="10" data-price="1599" data-rating="4">
+                    <div class="book-img">
+                        <img src="../assets/images/book10.jpg" alt="AI MASTERY">
+                    </div>
+                    <div class="book-info">
+                        <h3>AI MASTERY</h3>
+                        <p class="book-author">Dr.Rajeev Arora</p>
+                        <p class="book-price">₹1599.00</p>
+                        <div class="book-rating">
+                            ★★★★☆
+                        </div>
+                        <button class="add-to-cart" data-id="10">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-id="11" data-price="2499" data-rating="4">
+                    <div class="book-img">
+                        <img src="../assets/images/book11.jpg" alt="Computer Algorithms">
+                    </div>
+                    <div class="book-info">
+                        <h3>Computer Algorithms</h3>
+                        <p class="book-author">Rajeev Kumar</p>
+                        <p class="book-price">₹2499.00</p>
+                        <div class="book-rating">
+                            ★★★★☆
+                        </div>
+                        <button class="add-to-cart" data-id="11">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card" data-id="12" data-price="1799" data-rating="5">
+                    <div class="book-img">
+                        <img src="../assets/images/book12.jpg" alt="Organic Chemistry">
+                    </div>
+                    <div class="book-info">
+                        <h3>Organic Chemistry</h3>
+                        <p class="book-author">Dr. Anil Kapoor</p>
+                        <p class="book-price">₹1799.00</p>
+                        <div class="book-rating">
+                            ★★★★★
+                        </div>
+                        <button class="add-to-cart" data-id="12">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Book Haven</h3>
+                    <p>Your one-stop shop for all your reading needs since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="fiction.html">Fiction</a></li>
+                        <li><a href="non-fiction.html">Non-Fiction</a></li>
+                        <li><a href="children.html">Children</a></li>
+                        <li><a href="academic.html">Academic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Book St, Library City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@bookhaven.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Book Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize cart count
+            updateCartCount();
+            
+            // Add to cart functionality
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', addToCart);
+            });
+            
+            // Price filter functionality
+            document.querySelectorAll('[data-price]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active state
+                    document.querySelectorAll('[data-price]').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    const priceFilter = this.dataset.price;
+                    const books = document.querySelectorAll('.book-card');
+                    
+                    books.forEach(book => {
+                        const price = parseInt(book.dataset.price);
+                        let shouldShow = true;
+                        
+                        if (priceFilter === 'under') {
+                            shouldShow = price < 1000;
+                        } else if (priceFilter === 'mid') {
+                            shouldShow = price >= 1000 && price <= 2000;
+                        } else if (priceFilter === 'over') {
+                            shouldShow = price > 2000;
+                        }
+                        
+                        book.style.display = shouldShow ? 'block' : 'none';
+                    });
+                });
+            });
+            
+            // Sort functionality
+            document.querySelectorAll('[data-sort]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active state
+                    document.querySelectorAll('[data-sort]').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    const sortOption = this.dataset.sort;
+                    const booksContainer = document.querySelector('.books-grid');
+                    const books = Array.from(document.querySelectorAll('.book-card'));
+                    
+                    books.sort((a, b) => {
+                        const priceA = parseInt(a.dataset.price);
+                        const priceB = parseInt(b.dataset.price);
+                        const ratingA = parseInt(a.dataset.rating);
+                        const ratingB = parseInt(b.dataset.rating);
+                        
+                        if (sortOption === 'price-low') {
+                            return priceA - priceB;
+                        } else if (sortOption === 'price-high') {
+                            return priceB - priceA;
+                        } else { // rating
+                            return ratingB - ratingA;
+                        }
+                    });
+                    
+                    // Re-append sorted books
+                    books.forEach(book => booksContainer.appendChild(book));
+                });
+            });
+            
+            function addToCart(e) {
+                const bookId = parseInt(e.target.getAttribute('data-id'));
+                const bookData = {
+                    7: { id: 7, title: "Science Fundamentals", author: "Jane Smith", price: 1299, category: "academic", rating: 5, image: "../assets/images/book7.jpg" },
+                    8: { id: 8, title: "Advanced Mathematics", author: "Michael Wilson", price: 1899, category: "academic", rating: 3, image: "../assets/images/book8.jpg" },
+                    9: { id: 9, title: "Quantum Physics Explained", author: "Dr. Vikram Mehta", price: 2199, category: "academic", rating: 5, image: "../assets/images/book9.jpg" },
+                    10: { id: 10, title: "AI MASTERY", author: "Dr.Rajeev Arora", price: 1599, category: "academic", rating: 4, image: "../assets/images/book10.jpg" },
+                    11: { id: 11, title: "Computer Algorithms", author: "Rajeev Kumar", price: 2499, category: "academic", rating: 4, image: "../assets/images/book11.jpg" },
+                    12: { id: 12, title: "Organic Chemistry", author: "Dr. Anil Kapoor", price: 1799, category: "academic", rating: 5, image: "../assets/images/book12.jpg" }
+                };
+                
+                const book = bookData[bookId];
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                const existingItem = cart.find(item => item.id === bookId);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        ...book,
+                        quantity: 1
+                    });
+                }
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+                showNotification(`${book.title} added to cart!`);
+            }
+            
+            function updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                document.querySelectorAll('.cart-count').forEach(element => {
+                    element.textContent = totalItems;
+                });
+            }
+            
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="../assets/icons/logo.png" type="image/png">
+    <title>Fiction Books | Book Haven</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../assets/icons/book-favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">Book Haven</a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="fiction.html" class="active">Fiction</a></li>
+                    <li><a href="non-fiction.html">Non-Fiction</a></li>
+                    <li><a href="children.html">Children</a></li>
+                    <li><a href="academic.html">Academic</a></li>
+                    <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <h1>Fiction Books</h1>
+            <p>Explore our collection of novels, short stories, and classics</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+   <!-- Filters Section -->
+<section class="filters">
+    <div class="container">
+        <div class="filter-group">
+            <h3>Filter by Price</h3>
+            <div class="filter-options">
+                <button class="filter-btn">Under ₹500</button>
+                <button class="filter-btn">₹500 - ₹1000</button>
+                <button class="filter-btn">Over ₹1000</button>
+                <button class="filter-btn active">All</button>
+            </div>
+        </div>
+        <div class="filter-group">
+            <h3>Sort By</h3>
+            <div class="filter-options">
+                <button class="filter-btn">Price: Low to High</button>
+                <button class="filter-btn">Price: High to Low</button>
+                <button class="filter-btn active">Best Rated</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Books Grid -->
+    <section class="featured-books">
+        <div class="container">
+            <div class="books-grid">
+                <!-- Books will be dynamically added here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Book Haven</h3>
+                    <p>Your one-stop shop for all your reading needs since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="fiction.html">Fiction</a></li>
+                        <li><a href="non-fiction.html">Non-Fiction</a></li>
+                        <li><a href="children.html">Children</a></li>
+                        <li><a href="academic.html">Academic</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Book St, Library City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@bookhaven.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Book Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Price filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const priceFilter = this.textContent;
+                const books = document.querySelectorAll('.book-card');
+                
+                books.forEach(book => {
+                    const priceText = book.querySelector('.book-price').textContent;
+                    const price = parseFloat(priceText.replace('₹', ''));
+                    
+                    let shouldShow = true;
+                    
+                    if (priceFilter === 'Under ₹500') {
+                        shouldShow = price < 500;
+                    } else if (priceFilter === '₹500 - ₹1000') {
+                        shouldShow = price >= 500 && price <= 1000;
+                    } else if (priceFilter === 'Over ₹1000') {
+                        shouldShow = price > 1000;
+                    }
+                    
+                    book.style.display = shouldShow ? 'block' : 'none';
+                });
+            });
+        });
+        
+        // Sort functionality
+        document.querySelectorAll('.filter-options:last-child .filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-options:last-child .filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const sortOption = this.textContent;
+                const booksContainer = document.querySelector('.books-grid');
+                const books = Array.from(document.querySelectorAll('.book-card'));
+                
+                books.sort((a, b) => {
+                    const priceA = parseFloat(a.querySelector('.book-price').textContent.replace('₹', ''));
+                    const priceB = parseFloat(b.querySelector('.book-price').textContent.replace('₹', ''));
+                    const ratingA = a.querySelector('.book-rating').textContent.length;
+                    const ratingB = b.querySelector('.book-rating').textContent.length;
+                    
+                    if (sortOption === 'Price: Low to High') {
+                        return priceA - priceB;
+                    } else if (sortOption === 'Price: High to Low') {
+                        return priceB - priceA;
+                    } else { // Best Rated
+                        return ratingB - ratingA;
+                    }
+                });
+                
+                // Re-append sorted books
+                books.forEach(book => booksContainer.appendChild(book));
+            });
+        });
+    });
+</script>
+</body>
+</html>
