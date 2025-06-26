@@ -262,7 +262,7 @@ function displayFeaturedBooks() {
             <div class="book-info">
                 <h3>${book.title}</h3>
                 <p class="book-author">${book.author}</p>
-                <p class="book-price">$${book.price.toFixed(2)}</p>
+                <p class="book-price">₹${book.price.toFixed(2)}</p>
                 <div class="book-rating">
                     ${'★'.repeat(book.rating)}${'☆'.repeat(5 - book.rating)}
                 </div>
